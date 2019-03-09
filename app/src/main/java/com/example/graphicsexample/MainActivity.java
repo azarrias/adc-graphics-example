@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
             brush.setStrokeWidth(8);
             brush.setStyle(Paint.Style.STROKE);
             canvas.drawCircle(150, 150, 100, brush);
+            //brush.setColor(Color.argb(127, 255, 0, 0));
+            brush.setColor(getResources().getColor(R.color.colorCircle));
+            canvas.drawCircle(150, 250, 100, brush);
         }
     }
 }
