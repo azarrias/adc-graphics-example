@@ -37,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
             */
 
             Path stroke = new Path();
-            stroke.addCircle(150, 150, 100, Path.Direction.CCW);
+            //stroke.addCircle(150, 150, 100, Path.Direction.CW);
+            stroke.moveTo(50, 100);
+            stroke.cubicTo(60,70, 150, 65, 200, 110);
+            stroke.lineTo(300, 200);
             canvas.drawColor(Color.WHITE);
             Paint brush = new Paint();
             brush.setColor(Color.BLUE);
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             brush.setStyle(Paint.Style.FILL);
             brush.setTextSize(25);
             brush.setTypeface(Typeface.SANS_SERIF);
-            canvas.drawTextOnPath("App development for Android", stroke, 10, 40, brush);
+            canvas.drawTextOnPath("Android development", stroke, 0, 40, brush);
         }
     }
 }
