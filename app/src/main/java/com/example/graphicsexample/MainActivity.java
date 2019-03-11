@@ -6,6 +6,8 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,8 +21,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public class ExampleView extends View {
+        private Drawable drawable;
+
         public ExampleView (Context context) {
             super(context);
+            drawable = ContextCompat.getDrawable(context, R.drawable.anubis);
+            drawable.setBounds(30, 30, 1000, 1267);
         }
 
         @Override
@@ -36,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             canvas.drawCircle(150, 250, 100, brush);
             */
 
+            /* Paint path
             Path stroke = new Path();
             //stroke.addCircle(150, 150, 100, Path.Direction.CW);
             stroke.moveTo(50, 100);
@@ -52,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
             brush.setTextSize(25);
             brush.setTypeface(Typeface.SANS_SERIF);
             canvas.drawTextOnPath("Android development", stroke, 0, 40, brush);
+            */
+
+            drawable.draw(canvas);
         }
     }
 }
