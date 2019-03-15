@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         public ExampleView (Context context) {
             super(context);
-            drawable = ContextCompat.getDrawable(context, R.drawable.anubis);
+            //drawable = ContextCompat.getDrawable(context, R.drawable.anubis);
+            drawable = ContextCompat.getDrawable(context, R.drawable.star);
             drawable.setBounds(30, 30, 1000, 1267);
         }
 
