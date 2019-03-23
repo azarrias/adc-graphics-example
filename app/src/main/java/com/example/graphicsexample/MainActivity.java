@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             super(context);
             //drawable = ContextCompat.getDrawable(context, R.drawable.anubis);
             //drawable.setBounds(30, 30, 1000, 1267);
-            drawable = ContextCompat.getDrawable(context, R.drawable.ic_arrow_drop_up_black_24dp);
+            drawable = ContextCompat.getDrawable(context, R.drawable.ic_00555_celtic_swirl);
             drawable.setBounds(30, 30, 1000, 1000);
         }
 
