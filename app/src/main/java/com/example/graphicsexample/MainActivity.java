@@ -7,6 +7,8 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,13 +24,17 @@ public class MainActivity extends AppCompatActivity {
 
     public class ExampleView extends View {
         private Drawable drawable;
+        private ShapeDrawable shape;
 
         public ExampleView (Context context) {
             super(context);
             //drawable = ContextCompat.getDrawable(context, R.drawable.anubis);
             //drawable.setBounds(30, 30, 1000, 1267);
-            drawable = ContextCompat.getDrawable(context, R.drawable.ic_00555_celtic_swirl);
-            drawable.setBounds(30, 30, 1000, 1000);
+            //drawable = ContextCompat.getDrawable(context, R.drawable.ic_00555_celtic_swirl);
+            //drawable.setBounds(30, 30, 1000, 1000);
+            shape = new ShapeDrawable(new OvalShape());
+            shape.getPaint().setColor(0xFF0000FF);
+            shape.setBounds(50, 50, 310, 200);
         }
 
         @Override
@@ -63,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             canvas.drawTextOnPath("Android development", stroke, 0, 40, brush);
             */
 
-            drawable.draw(canvas);
+            shape.draw(canvas);
         }
     }
 }
